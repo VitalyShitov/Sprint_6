@@ -41,7 +41,6 @@ class FaqPage:
         try:
             btn.click()
         except ElementClickInterceptedException:
-            # элемент перекрыт (баннер, анимация) — кликаем через JS
             self.driver.execute_script("arguments[0].click();", btn)
 
     def get_answer_text(self, index):

@@ -54,7 +54,6 @@ class OrderPage:
         try:
             WebDriverWait(self.driver, 5).until(station_chosen)
         except TimeoutException:
-            # запасной путь: клик по кнопке нужной станции в списке
             try:
                 btn = WebDriverWait(self.driver, 3).until(
                     lambda d: self.driver.find_elements(
@@ -153,8 +152,6 @@ class OrderPage:
         )
         modal = title.find_element(By.XPATH, "./ancestor::div[contains(@class,'Order_Modal__')]")
 
-        # «Да» — вторая кнопка в контейнере кнопок окна (разметка стенда),
-        # поиск по тексту как запасной вариант, затем по всей странице
         candidates = modal.find_elements(
             By.CSS_SELECTOR, "div.Order_Buttons__1xGrp > button:nth-child(2)"
         )
