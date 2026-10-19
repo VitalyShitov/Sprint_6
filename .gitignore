@@ -12,7 +12,6 @@ env/
 # Pytest / отчёты
 .pytest_cache/
 allure-results/
-allure-report/
 run.log
 *.log
 
