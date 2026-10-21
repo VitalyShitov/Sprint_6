@@ -37,7 +37,6 @@ class OrderLocators:
     
     @staticmethod
     def station_option(station: str):
-        """Кнопка конкретной станции в выпадающем списке метро."""
         return (
             By.XPATH,
             f"//ul[contains(@class,'select-search')]//button[normalize-space()='{station}']",

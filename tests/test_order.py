@@ -6,7 +6,6 @@ from urls import BASE_URL, ORDER_URL
 
 @allure.feature("Заказ самоката")
 class TestOrderFlow:
-    """Полный позитивный сценарий заказа самоката."""
 
     @allure.story("Полный позитивный сценарий заказа")
     @pytest.mark.parametrize(
@@ -54,7 +53,6 @@ class TestOrderFlow:
 
 @allure.feature("Логотипы в шапке")
 class TestHeaderLogos:
-    """Переходы по логотипам в шапке сайта."""
 
     @allure.story("Логотип «Самоката» возвращает на главную")
     def test_scooter_logo_redirect(self, order_page):

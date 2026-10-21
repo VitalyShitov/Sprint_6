@@ -4,7 +4,6 @@ from helpers.locators import FaqLocators, OrderLocators
 
 
 class FaqPage(BasePage):
-    """Страница FAQ «Вопросы о важном» на главной."""
 
     def open(self, url):
         self.open_url(url)

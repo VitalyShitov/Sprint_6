@@ -6,7 +6,6 @@ from helpers.locators import OrderLocators
 
 
 class OrderPage(BasePage):
-    """Страница оформления заказа Яндекс.Самокат."""
 
     def open(self, url):
         self.open_url(url)
