@@ -1,0 +1,26 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Pytest / отчёты
+.pytest_cache/
+allure-results/
+allure-report/
+report.html
+run.log
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# Selenium / драйверы
+geckodriver.log
+chromedriver.log
+driver/
+drivers/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
