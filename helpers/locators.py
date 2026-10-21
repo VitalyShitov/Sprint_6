@@ -28,8 +28,28 @@ class OrderLocators:
 
     LOGO_SCOOTER = (By.XPATH, "(//a[@href='/'])[1]")
     LOGO_YANDEX = (By.XPATH, "//a[@href='//yandex.ru']")
-
+    
+    STATION_DROPDOWN = (By.XPATH, "//ul[contains(@class,'select-search')]")
+    YES_BTN_IN_MODAL = (By.XPATH, ".//button[normalize-space()='Да']")
+    YES_BTN_ANY = (By.XPATH, "//button[normalize-space()='Да']")
+    MODAL_ANCESTOR = (By.XPATH, "./ancestor::div[contains(@class,'Order_Modal__')]")
+    DIAG_ERROR = (By.XPATH, "//*[contains(text(),'Ошибка') or contains(text(),'ошибка')]")
+    
+    @staticmethod
+    def station_option(station: str):
+        """Кнопка конкретной станции в выпадающем списке метро."""
+        return (
+            By.XPATH,
+            f"//ul[contains(@class,'select-search')]//button[normalize-space()='{station}']",
+        )
 
 class FaqLocators:
-    QUESTION_BUTTON = (By.XPATH, "//div[@class='accordion__button']")
-    ANSWER_PANEL = (By.XPATH, "following::div[@class='accordion__panel'][1]")
+    FAQ_SECTION_BUTTON = (By.XPATH, "//div[@class='accordion__button']")
+
+    @staticmethod
+    def question(index: int):
+        return (By.ID, f"accordion__heading-{index}")
+
+    @staticmethod
+    def answer(index: int):
+        return (By.ID, f"accordion__panel-{index}")

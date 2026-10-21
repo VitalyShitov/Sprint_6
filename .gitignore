@@ -1,13 +1,13 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.eggs/
-build/
-dist/
-.venv/
 venv/
-env/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/
+.vscode/
+allure-results/
+allure-report/
+report.html
 
 # Pytest / отчёты
 .pytest_cache/
